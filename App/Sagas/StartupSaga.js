@@ -1,5 +1,5 @@
 import { put } from 'redux-saga/effects'
-import ExampleActions from 'App/Stores/Example/Actions'
+import GameActions from 'App/Stores/Game/Actions'
 import NavigationService from 'App/Services/NavigationService'
 
 /**
@@ -8,7 +8,7 @@ import NavigationService from 'App/Services/NavigationService'
 export function* startup() {
   // Dispatch a redux action using `put()`
   // @see https://redux-saga.js.org/docs/basics/DispatchingActions.html
-  yield put(ExampleActions.fetchUser())
+  yield put(GameActions.fetchUser())
 
   // Add more operations you need to do at startup here
   // ...

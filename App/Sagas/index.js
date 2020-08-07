@@ -1,7 +1,7 @@
 import { takeLatest, all } from 'redux-saga/effects'
-import { ExampleTypes } from 'App/Stores/Example/Actions'
+import { GameTypes } from 'App/Stores/Game/Actions'
 import { StartupTypes } from 'App/Stores/Startup/Actions'
-import { fetchUser } from './ExampleSaga'
+import { fetchUser } from './GameSaga'
 import { startup } from './StartupSaga'
 
 export default function* root() {
@@ -12,6 +12,6 @@ export default function* root() {
     // Run the startup saga when the application starts
     takeLatest(StartupTypes.STARTUP, startup),
     // Call `fetchUser()` when a `FETCH_USER` action is triggered
-    takeLatest(ExampleTypes.FETCH_USER, fetchUser),
+    takeLatest(GameTypes.FETCH_USER, fetchUser),
   ])
 }

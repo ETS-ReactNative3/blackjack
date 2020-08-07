@@ -29,4 +29,19 @@ export default StyleSheet.create({
     marginBottom: Metrics.tiny,
     textAlign: 'center',
   },
+  background: {
+    width: '100%',
+    height: '100%'
+  },
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center'
+    
+  },
+  title: {
+    fontSize: 50,
+    alignItems: 'center',
+    marginBottom: 20
+  },
 })
