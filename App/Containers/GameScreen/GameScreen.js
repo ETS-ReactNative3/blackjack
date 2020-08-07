@@ -5,6 +5,7 @@ import { PropTypes } from 'prop-types'
 import GameActions from 'App/Stores/Game/Actions'
 import Style from './GameScreenStyle'
 import { ApplicationStyles, Helpers, Images, Metrics } from 'App/Theme'
+import Game from '../../Components/Game'
 
 /**
  * This is an example of a container component.
@@ -18,7 +19,7 @@ const instructions = Platform.select({
   android: 'Double tap R on your keyboard to reload,\nShake or press menu button for dev menu.',
 })
 
-const Onborarding = ()  => {
+const Onborarding = ({onStartGame})  => {
   return (
     <ImageBackground style ={Style.background} source={require('../../Assets/Images/background.jpeg')}>
       <View style={{flex: 1}}>
@@ -27,7 +28,7 @@ const Onborarding = ()  => {
             <Text style={{fontSize: 50,color: '#eee', fontWeight: '800'}}>Welcome to <Text style={{fontStyle: 'italic'}}>Blackjack!</Text></Text>
           </View>
           <Button 
-            onPress = {this.handleStart} 
+            onPress = {onStartGame} 
             title = "Click here to start!"
             buttonStyle = {{backgroundColor: 'red'}}
           />
@@ -49,20 +50,26 @@ class GameScreen extends React.Component {
       return <Game/>
     }
 
-    return <Onborarding/>
+    return <Onborarding onStartGame={this._startGame()}/>
   }
 
   _fetchUser() {
     this.props.fetchUser()
   }
+
+  _startGame() {
+    console.log("Hello World")
+    this.props.startGame()
+  }
 }
+
 GameScreen.propTypes = {
   started: PropTypes.bool, 
   user: PropTypes.object,
   userIsLoading: PropTypes.bool,
   userErrorMessage: PropTypes.string,
   fetchUser: PropTypes.func,
-  liveInEurope: PropTypes.bool,
+  startGame: PropTypes.func, 
 }
 
 const mapStateToProps = (state) => ({
@@ -74,6 +81,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   fetchUser: () => dispatch(GameActions.fetchUser()),
+  startGame: () => dispatch(GameActions.startGame())
 })
 
 export default connect(

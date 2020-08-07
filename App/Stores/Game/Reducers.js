@@ -28,6 +28,11 @@ export const fetchUserFailure = (state, { errorMessage }) => ({
   userErrorMessage: errorMessage,
 })
 
+export const startGame = (state) => ({
+  ...state, 
+  started: true,
+})
+
 /**
  * @see https://github.com/infinitered/reduxsauce#createreducer
  */
@@ -35,4 +40,5 @@ export const reducer = createReducer(INITIAL_STATE, {
   [GameTypes.FETCH_USER_LOADING]: fetchUserLoading,
   [GameTypes.FETCH_USER_SUCCESS]: fetchUserSuccess,
   [GameTypes.FETCH_USER_FAILURE]: fetchUserFailure,
+  [GameTypes.START_GAME]: startGame,
 })

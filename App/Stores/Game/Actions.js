@@ -27,6 +27,8 @@ const { Types, Creators } = createActions({
   fetchUserSuccess: ['user'],
   // An error occurred
   fetchUserFailure: ['errorMessage'],
+  // Start game 
+  startGame: null, 
 })
 
 export const GameTypes = Types
