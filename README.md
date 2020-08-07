@@ -3,7 +3,7 @@
 
 ## Architecture
 
-The driving goal of the architecture of the boilerplate is separation of concerns. Namely:
+The driving goal of the architecture of the blackjack is separation of concerns. Namely:
 
 - **Presentational components are separated from containers** (aka "screens").
 
@@ -27,8 +27,6 @@ The driving goal of the architecture of the boilerplate is separation of concern
 
 ## Content
 
-The boilerplate contains:
-
 - a [React Native](https://facebook.github.io/react-native/) (v**0.61.5**) application (in "[ejected](https://github.com/react-community/create-react-native-app/blob/master/EJECTING.md)" mode to allow using dependencies that rely on native code)
 - a [clear directory layout](#directory-layout) to provide a base architecture for your application
 - [Redux](https://redux.js.org/) (v4.0.1) to help manage state
@@ -39,7 +37,6 @@ The boilerplate contains:
 - [axios](https://github.com/axios/axios) to make API calls (v0.19.0)
 - [prettier](https://prettier.io/) and [eslint](https://eslint.org/) preconfigured for React Native
 
-The boilerplate includes an example (displaying fake user data) from UI components to the saga. The example is easy to remove so that it doesn't get in the way.
 
 ## Directory layout
 
@@ -53,11 +50,6 @@ The boilerplate includes an example (displaying fake user data) from UI componen
 - [`App/Stores`](App/Stores): redux [actions, reducers and stores](https://redux.js.org/basics)
 - [`App/Theme`](App/Theme): base styles for the application
 
-For more information on each directory, click the link and read the directory's README.
-
-## Updates
-
-The boilerplate will follow new React-Native releases as soon as libraries and tools used here are compatible.
 
 ## Requirements
 
@@ -69,19 +61,12 @@ You also need to install the dependencies required by React Native:
 - for [iOS development](https://facebook.github.io/react-native/docs/getting-started.html#installing-dependencies)
 
 
-## Using the boilerplate
+## Using the blackjack
 
-To create a new project using the boilerplate:
+To create a new project using the blackjack:
 
 - clone this repository
-- remove the previous git history: `rm -rf .git/`
-- install the npm dependencies by running `yarn`
-- rename the React Native project to your own project name: `yarn run rename -- <YourProjectName>` (the default name is `Boilerplate`)
-- remove the LICENSE file and the "License" section from the README if your project is not open source
-
-Feel free to remove the section "Using the boilerplate" from the README (you will not need it anymore in your project). You are encouraged to keep the rest of the documentation in your project so that it is self-explanatory.
-
-You can now create a new git repository for your project (using `git init`) and create the first commit.
+- install the node dependencies by running `yarn`
 
 ## Running the project
 
@@ -122,8 +107,3 @@ Assuming you have all the requirements installed, you can setup and run the proj
   
   
 ## Troubleshooting
-
-### App fails to start after renaming
-
-If your application fails to start after using the `yarn run rename` command, please take a look at [this issue](https://github.com/thecodingmachine/react-native-boilerplate/issues/34)
-
