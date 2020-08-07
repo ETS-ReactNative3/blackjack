@@ -1,4 +1,4 @@
-# React Native Project Starter
+# Blackjack
 
 
 ## Architecture
