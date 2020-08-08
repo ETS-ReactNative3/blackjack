@@ -26,6 +26,15 @@
     "react": {
       "version": "detect",
     },
+    "import/resolver": {
+      "node": {
+        "paths": ["App"],
+        "alias": {
+          "Assets": "./App/Assets",
+          "Components": "./App/Components"
+        }
+      }
+    }
   },
   "rules": {
     "react-native/no-raw-text": 0 // Avoid false positive, wait for fix

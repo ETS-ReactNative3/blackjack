@@ -5,7 +5,7 @@ import { PropTypes } from 'prop-types'
 import GameActions from 'App/Stores/Game/Actions'
 import Style from './GameScreenStyle'
 import { ApplicationStyles, Helpers, Images, Metrics } from 'App/Theme'
-import Game from '../../Components/Game'
+import Game from 'Components/Game'
 
 /**
  * This is an example of a container component.
@@ -21,7 +21,7 @@ const instructions = Platform.select({
 
 const Onborarding = ({onStartGame})  => {
   return (
-    <ImageBackground style ={Style.background} source={require('../../Assets/Images/background.jpeg')}>
+    <ImageBackground style ={Style.background} source={require('Assets/Images/background.jpeg')}>
       <View style={{flex: 1}}>
         <View style = {Style.container}>
           <View style={Style.title}> 

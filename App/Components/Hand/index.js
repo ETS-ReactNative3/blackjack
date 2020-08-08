@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {StyleSheet, Text, View } from 'react-native';
-import Card from './Card';
+import Card from 'Components/Card';
 
 export default class Hand extends Component {
   constructor(props) {

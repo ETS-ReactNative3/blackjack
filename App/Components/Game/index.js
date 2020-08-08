@@ -3,8 +3,8 @@ import { Modal, StyleSheet, Text, View, ImageBackground, Image} from 'react-nati
 import { Button } from 'react-native-elements';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faQuestionCircle, faTimesCircle } from '@fortawesome/free-solid-svg-icons'
-import Interface from './Interface';
-import Hand from './Hand';
+import Interface from '../Interface';
+import Hand from '../Hand';
 
 export default class Game extends Component {
   constructor(props) {
@@ -260,7 +260,7 @@ export default class Game extends Component {
     }
 
     return (
-      <ImageBackground style ={styles.background} source={require('../Assets/Images/background.jpeg')}>
+      <ImageBackground style ={styles.background} source={require('Assets/Images/background.jpeg')}>
         <FontAwesomeIcon icon={ faQuestionCircle } size= { 24 } color = { 'white' } onPress={() => this.setModalVisible(!this.state.modalVisible)} style = {styles.icon}/>
         <Modal animationType = "slide" visible={this.state.modalVisible}>
           <View style={{
@@ -276,7 +276,7 @@ export default class Game extends Component {
               <Text>Note: There is no double down or insurance.</Text>
               <Text style={{fontWeight: '600'}}>Las Vegas Strip Rules:</Text> 
               <Text>There are 6 decks in total. Dealer must draw to all totals of 16 or less and stand on all totals of 17 to 21. </Text>
-              <Image source={require('../Assets/Images/strip.jpeg')} style={{width:200, height: 200, marginTop: 20, marginBottom: 20, marginLeft: 50}} />   
+              <Image source={require('Assets/Images/strip.jpeg')} style={{width:200, height: 200, marginTop: 20, marginBottom: 20, marginLeft: 50}} />   
               <Button
                 onPress = {() => this.setModalVisible(!this.state.modalVisible)}
                 title = "Click here to close"
