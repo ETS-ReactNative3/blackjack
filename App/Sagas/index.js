@@ -12,7 +12,7 @@ export default function* root() {
     // Run the startup saga when the application starts
     takeLatest(StartupTypes.STARTUP, startup),
     // // Call `fetchUser()` when a `FETCH_USER` action is triggered
-    takeLatest(UserTypes.FETCH_USER, fetchUser),
+    takeEvery(UserTypes.FETCH_USER, fetchUser),
     takeEvery(UserTypes.LOGIN_REQUEST, loginRequest), 
     takeEvery(UserTypes.REGISTER_REQUEST, registerRequest), 
     takeEvery(UserTypes.LOG_OUT, logOut), 

@@ -58,7 +58,6 @@ export function* registerRequest({ data }) {
 
 
 export function* logOut() {
-  console.log('Hello World')
   const logout = yield call(mapAuthProviders['firebase'].logout)
   if(logout) {
     yield put(UserActions.logOut())
