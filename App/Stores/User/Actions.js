@@ -28,11 +28,11 @@ import { createActions } from 'reduxsauce'
  * User
  */
 const { Types, Creators } = createActions({
-  loginRequest: ['username', 'password'],
-  loginSuccess: ['username'],
-  loginFailure: ['error'],
-  registerRequest: ['username', 'password', 'fullName'], 
-  registerSuccess: ['username'],
+  loginRequest: ['data'],
+  loginSuccess: ['payload'],
+  loginFailure: null, 
+  registerRequest: ['data'], 
+  registerSuccess: ['payload'],
   registerFailure: ['error'],
   fetchUser: null,
   // The operation has started and is loading
@@ -41,7 +41,7 @@ const { Types, Creators } = createActions({
   fetchUserSuccess: ['user'],
   // An error occurred
   fetchUserFailure: ['errorMessage'],
-  logout: null,
+  logOut: null,
 })
 
 export const UserTypes = Types

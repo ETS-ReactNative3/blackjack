@@ -2,7 +2,6 @@ import React from 'react'
 import { Text, View, ActivityIndicator, } from 'react-native'
 import styles from './SplashScreenStyle'
 import { Helpers } from 'App/Theme'
-import firebase from 'react-native-firebase'
 
 export default class SplashScreen extends React.Component {
   render() {

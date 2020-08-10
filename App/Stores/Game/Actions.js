@@ -21,6 +21,7 @@ import { createActions } from 'reduxsauce'
 const { Types, Creators } = createActions({
   // Start game 
   startGame: null, 
+  endGame: null, 
 })
 
 export const GameTypes = Types

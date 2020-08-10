@@ -18,22 +18,25 @@ export class OnboardingScreen extends Component {
    * Two login function that waits 1000 ms and then authenticates the user succesfully.
    * In your real app they should be replaced with an API call to you backend.
    */
-  _simulateLogin = (username, password) => {
+  _simulateLogin = (email, password) => {
     this.setState({ isLoading: true })
     setTimeout(() => this.setState({ isLoggedIn: true, isLoading: false }), 1000)
+    this.props.loginRequest(email, password)
   }
 
-  _simulateSignup = (username, password, fullName) => {
+  _simulateSignup = (email, password, fullName) => {
     this.setState({ isLoading: true })
     setTimeout(() => this.setState({ isLoggedIn: true, isLoading: false }), 1000)
+    this.props.registerRequest(email, password, fullName)
   }
 
   /**
    * Simple routing.
    * If the user is authenticated (isAppReady) show the HomeScreen, otherwise show the AuthScreen
    */
+
   render() {
-    if (this.props.isAppReady) {
+    if (this.props.user && this.props.user.email) {
       return <GameScreen />
     } else {
       return (
@@ -55,17 +58,21 @@ GameScreen.propTypes = {
   isLoggedIn:  PropTypes.bool, 
   isLoading:  PropTypes.bool, 
   isAppReady:  PropTypes.bool,
+  loginRequest: PropTypes.func, 
+  registerRequest: PropTypes.func, 
+  user: PropTypes.object, 
 }
 
 const mapStateToProps = (state) => ({
+  user: state.user.user, 
   isLoggedIn: state.user.isLoggedIn, 
   isLoading: state.user.isLoading, 
   isAppReady: state.user.isAppReady, 
 })
 
 const mapDispatchToProps = (dispatch) => ({
-  _simulateLogin: () => dispatch(UserActions.loginRequest(email, password)),
-  _simulateSignup: () => dispatch(UserActions.registerRequest(username, password, fullName))
+  loginRequest: (email, password) => dispatch(UserActions.loginRequest({ email: email, password: password })),
+  registerRequest: (email, password, fullName) => dispatch(UserActions.registerRequest({email: email, password: password, fullName: fullName}))
 })
 
 export default connect(

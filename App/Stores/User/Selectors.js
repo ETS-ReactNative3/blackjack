@@ -14,3 +14,9 @@ export const liveInEurope = (state) => {
 
   return europeanCities.includes(state.example.user.address.city)
 }
+
+
+
+export const UserInfoSelectors = {
+  getData: state => state.data
+}
