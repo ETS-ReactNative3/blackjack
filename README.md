@@ -1,9 +1,13 @@
 # Blackjack
 
+<div align="center">
+    <img src="App/Assets/Images/AppStore.png" alt="Logo" width="100%">
+</div>
 
 ## Architecture
 
 The driving goal of the architecture of the blackjack is separation of concerns. Namely:
+
 
 - **Presentational components are separated from containers** (aka "screens").
 
@@ -27,7 +31,7 @@ The driving goal of the architecture of the blackjack is separation of concerns.
 
 ## Content
 
-- a [React Native](https://facebook.github.io/react-native/) (v**0.61.5**) application (in "[ejected](https://github.com/react-community/create-react-native-app/blob/master/EJECTING.md)" mode to allow using dependencies that rely on native code)
+- [React Native](https://facebook.github.io/react-native/) (v**0.61.5**) application (in "[ejected](https://github.com/react-community/create-react-native-app/blob/master/EJECTING.md)" mode to allow using dependencies that rely on native code)
 - a [clear directory layout](#directory-layout) to provide a base architecture for your application
 - [Redux](https://redux.js.org/) (v4.0.1) to help manage state
 - [Redux Persist](https://github.com/rt2zz/redux-persist) (v5.10.0) to persist the Redux state
@@ -68,6 +72,7 @@ To create a new project using the blackjack:
 - clone this repository
 - install the node dependencies by running `yarn`
 
+
 ## Running the project
 
 Assuming you have all the requirements installed, you can setup and run the project by running:
@@ -93,7 +98,14 @@ Assuming you have all the requirements installed, you can setup and run the proj
 - `yarn start` to start the metro bundler, in a dedicated terminal
 - `yarn ios` to run the iOS application (remember to start a simulator or connect an iPhone phone)
 
-## Useful documentation
+## Play the game 
+- I have created an account for the bunch team to use to test out the game
+  - email - bunch@live.ca 
+  - password - Bunching
+
+- Or you can also register and create an account for yourself. 
+
+Enjoy :) 
 
 ### Deployment
 
