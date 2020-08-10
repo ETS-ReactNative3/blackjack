@@ -1,13 +1,16 @@
 import { StyleSheet } from 'react-native'
 
 const size = {
-  h1: 38,
-  h2: 34,
-  h3: 30,
+  h1: 34,
+  h2: 24,
+  h3: 20,
+  title: 16,
+  subtitle: 13,
+  caption: 12,
   input: 18,
   regular: 17,
   medium: 14,
-  small: 12,
+  small: 10
 }
 
 export default StyleSheet.create({

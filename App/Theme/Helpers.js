@@ -1,5 +1,13 @@
 import { StyleSheet } from 'react-native'
-import { Colors } from 'App/Theme'
+import Colors from './Colors'
+
+const size = {
+  // global sizes
+  base: 8,
+  font: 16,
+  radius: 30,
+  padding: 26,
+}
 
 export default StyleSheet.create({
   backgroundReset: {
@@ -169,4 +177,8 @@ export default StyleSheet.create({
   textRight: {
     textAlign: 'right',
   },
+  base: {
+    width: size.base,
+    height: size.base
+  }
 })

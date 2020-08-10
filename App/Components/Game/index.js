@@ -3,8 +3,8 @@ import { Modal, StyleSheet, Text, View, ImageBackground, Image} from 'react-nati
 import { Button } from 'react-native-elements';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faQuestionCircle, faTimesCircle } from '@fortawesome/free-solid-svg-icons'
-import Interface from '../Interface';
-import Hand from '../Hand';
+import Interface from 'Components/Interface';
+import Hand from 'Components/Hand';
 
 export default class Game extends Component {
   constructor(props) {

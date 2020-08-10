@@ -33,6 +33,8 @@ target 'blackjack' do
   pod 'DoubleConversion', :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
+
+  
   target 'blackjackTests' do
     inherit! :search_paths
     # Pods for testing
@@ -44,5 +46,12 @@ target 'blackjack-tvOS' do
   target 'blackjack-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
+  end
+end
+post_install do |pi|
+  pi.pods_project.targets.each do |t|
+    t.build_configurations.each do |config|
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '9.0'
+    end
   end
 end
